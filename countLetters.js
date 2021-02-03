@@ -13,7 +13,7 @@ const countLetters = function(word) {
     if(letter === " "){
       
     } else if(letter in obj){
-      obj[letter] += 1;
+      obj[letter] += 1; 
     } else {
       obj[letter] = 1;
     }
