@@ -10,19 +10,20 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(word) {
   let obj = {};
   for(const letter of word){
-    if(letter in obj){
+    if(letter === " "){
+      
+    } else if(letter in obj){
       obj[letter] += 1;
     } else {
-
       obj[letter] = 1;
     }
   
   }
-  // console.log(obj);
+  console.log(obj);
   return obj;
 };
 
-const result = countLetters("meateater");
+const result = countLetters("meat eater");
 const result1 = countLetters("lhl");
-assertEqual(result['m'], 1);
-assertEqual(result1['l'], 2);
+// assertEqual(result['m'], 1);
+// assertEqual(result1['l'], 2);
