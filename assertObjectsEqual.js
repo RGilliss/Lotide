@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌  Assertion Failed: ${actual} !== ${expected}`);
-  }
-
-};
 const eqArrays = function(ar1, ar2) {
   if (ar1 === ar2) {
     
@@ -43,26 +35,33 @@ const eqObjects = function(object1, object2) {
   }
   return false;
 };
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect;
+  if (eqObjects(actual, expected) === true) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}}`);
+  } else {
+    console.log(`❌❌❌  Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }
+};
 
-const cd = { c: "1", d: ["2", 3]};
-const dc = { d: ["2", 3], c: "1" };
-// eqObjects(cd, dc); // => true
+const dogs = {
+  breed: "pitbull",
+  coat: "brown",
+  name: "lilo",
+};
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-eqObjects(cd, cd2); // => false
+const dogs1 = {
+  breed: "pitbull",
+  coat: "brown",
+  name: "lilo",
+};
+const cats = {
+  breed: "kitty",
+  coat: "bald",
+  name: "muffin",
+};
 
-assertEqual(eqObjects(cd, dc), true);
-assertEqual(eqObjects(cd, cd2), false);
 
 
-
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-eqObjects(ab, ba); // => true
-
-const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // => false
-
-assertEqual(eqObjects(ab, ba), true);
-assertEqual(eqObjects(ab, abc), false);
-
+assertObjectsEqual(dogs, dogs1);
+assertObjectsEqual(dogs, cats);
