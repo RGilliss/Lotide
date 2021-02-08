@@ -41,14 +41,16 @@ const without = function(source, remove) {
   for(let i = 0; i < remove.length; i++){
     newAr = newAr.filter(x => x !== remove[i]);
   }
-  console.log(newAr);
+  return newAr;
 };
 
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, "2", 3]) // => ["1", "3"]
-without([4, 8, 12, 16], [12]);
+// without([1, 2, 3], [1]) // => [2, 3]
+// without(["1", "2", "3"], [1, "2", 3]) // => ["1", "3"]
+// without([4, 8, 12, 16], [12]);
 
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+// const words = ["hello", "world", "lighthouse"];
+// without(words, ["lighthouse"]); // no need to capture return value for this test case
+// // Make sure the original array was not altered by the without function
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+module.exports = without;

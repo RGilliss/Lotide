@@ -44,26 +44,26 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-const dogs = {
-  breed: "pitbull",
-  coat: "brown",
-  name: "lilo",
-};
+// const dogs = {
+//   breed: "pitbull",
+//   coat: "brown",
+//   name: "lilo",
+// };
 
-const dogs1 = {
-  breed: "pitbull",
-  coat: "brown",
-  name: "lilo",
-};
-const cats = {
-  breed: "kitty",
-  coat: "bald",
-  name: "muffin",
-};
+// const dogs1 = {
+//   breed: "pitbull",
+//   coat: "brown",
+//   name: "lilo",
+// };
+// const cats = {
+//   breed: "kitty",
+//   coat: "bald",
+//   name: "muffin",
+// };
 
 
 
-assertObjectsEqual(dogs, dogs1);
-assertObjectsEqual(dogs, cats);
+// assertObjectsEqual(dogs, dogs1);
+// assertObjectsEqual(dogs, cats);
 
 module.exports = assertObjectsEqual;

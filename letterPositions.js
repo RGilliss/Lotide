@@ -38,17 +38,16 @@ const letterPositions = function(sentence) {
     } else if (!(sentence[i] in results)) {
       results[sentence[i]] = [i];
     }
-  
   }
   return results;
 };
 
 const result = letterPositions('hello');
 
-assertArraysEqual(result['h'], [0]);
-assertArraysEqual(result['e'], [1]);
-assertArraysEqual(result['l'], [2, 3]);
-assertArraysEqual(result['o'], [4]);
+// assertArraysEqual(result['h'], [0]);
+// assertArraysEqual(result['e'], [1]);
+// assertArraysEqual(result['l'], [2, 3]);
+// assertArraysEqual(result['o'], [4]);
 
 
 module.exports = letterPositions;
