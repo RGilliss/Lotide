@@ -1,11 +1,10 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌  Assertion Failed: ${actual} !== ${expected}`);
-  }
-
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`❌❌❌  Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const assertArraysEqual = function(ar1, ar2) {
 
@@ -29,4 +28,5 @@ const assertArraysEqual = function(ar1, ar2) {
   return true;
 };
 
-console.log(assertArraysEqual(['one', 2, 'four'], ['one', 2, 'for']));
+// console.log(assertArraysEqual(['one', 2, 'four'], ['one', 2, 'for']));
+module.exports = assertArraysEqual;
