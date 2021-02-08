@@ -46,3 +46,5 @@ const results1 = map(words, word => word[0]);
 assertArraysEqual(map(fish, word => word.length), [5, 6, 0, 4]);
 assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(map(empty, word => word[0],), []);
+
+module.exports = map;

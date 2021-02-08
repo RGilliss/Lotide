@@ -65,3 +65,5 @@ const cats = {
 
 assertObjectsEqual(dogs, dogs1);
 assertObjectsEqual(dogs, cats);
+
+module.exports = assertObjectsEqual;

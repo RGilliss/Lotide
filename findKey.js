@@ -35,3 +35,5 @@ assertEqual(findKey({
   "here":       { words: false },
   "Akelarre":  { words: "denada" }
 }, x => x.words === false), "here");
+
+module.exports = findKey;
